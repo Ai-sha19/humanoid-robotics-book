@@ -56,9 +56,7 @@ const sidebars: SidebarsConfig = {
         type: 'doc',
         id: 'real-world-applications/index',
       },
-      items: [
-        'real-world-applications/real-world-applications',
-      ],
+      items: [],
     },
   ],
 };
