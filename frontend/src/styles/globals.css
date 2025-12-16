@@ -35,17 +35,17 @@
     --popover-foreground: 210 40% 98%;
     --primary: 210 40% 98%;
     --primary-foreground: 222.2 47.4% 11.2%;
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 45 86% 65%; /* gold/amber */
+    --secondary-foreground: 222.2 47.4% 11.2%;
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 45 86% 65%; /* gold/amber */
+    --accent-foreground: 222.2 47.4% 11.2%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --ring: 45 86% 65%; /* gold/amber */
   }
 }
 
@@ -69,11 +69,11 @@
 
 /* Gradient utility classes */
 .gradient-bg {
-  @apply bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-blue-900;
+  @apply bg-gradient-to-br from-yellow-50 to-amber-100 dark:from-gray-900 dark:to-amber-900;
 }
 
 .gradient-text {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600;
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 to-amber-600;
 }
 
 /* Mobile-first responsive adjustments */

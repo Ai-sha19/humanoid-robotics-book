@@ -12,9 +12,12 @@ function HomepageHeader() {
       <div className="container">
         <div className="glass-card" style={{padding: '4rem 2rem', display: 'flex', flexDirection: 'row', alignItems: 'center', gap: '2rem', backdropFilter: 'blur(16px)'}}>
           <div style={{flex: 1, textAlign: 'left'}}>
-            <Heading as="h1" className="hero__title" style={{color: 'white', fontWeight: 'bold', textAlign: 'left'}}>
-              Introduction to Physical AI & Humanoid Robotics
-            </Heading>
+            <div style={{display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1rem'}}>
+
+              <Heading as="h1" className="hero__title" style={{color: 'white', fontWeight: '800', textAlign: 'left', margin: 0}}>
+                Introduction to Physical AI & Humanoid Robotics
+              </Heading>
+            </div>
             <p className="hero__subtitle" style={{color: 'white', fontSize: '1.1rem', marginBottom: '2rem', textAlign: 'left'}}>
               A comprehensive textbook for students and professionals applying their AI knowledge to control Humanoid Robots
             </p>
@@ -28,7 +31,7 @@ function HomepageHeader() {
           </div>
           <div style={{flex: 1, display: 'flex', justifyContent: 'center'}}>
             <img
-              src="/img/robot.png"
+              src="/img/icon.png"
               alt="Robot illustration"
               style={{maxWidth: '100%', height: 'auto', borderRadius: '12px', maxHeight: '300px'}}
             />
@@ -137,3 +140,5 @@ export default function Home(): ReactNode {
     </Layout>
   );
 }
+
+

@@ -6,13 +6,20 @@
 
 /* Custom theme colors for Physical AI & Humanoid Robotics textbook */
 :root {
-  --ifm-color-primary: #1d4ed8; /* Dark blue */
-  --ifm-color-primary-dark: #1e40af;
-  --ifm-color-primary-darker: #1e3a8a;
-  --ifm-color-primary-darkest: #172554;
-  --ifm-color-primary-light: #3b82f6;
-  --ifm-color-primary-lighter: #60a5fa;
-  --ifm-color-primary-lightest: #93c5fd;
+  --ifm-color-primary: #d28028; /* Golden orange */
+  --ifm-color-primary-dark: #b86e21;
+  --ifm-color-primary-darker: #9e5d1c;
+  --ifm-color-primary-darkest: #844c17;
+  --ifm-color-primary-light: #dd9241;
+  --ifm-color-primary-lighter: #e4a55f;
+  --ifm-color-primary-lightest: #ecc88d;
+  --ifm-color-secondary: #DC7D2F; /* Orange-brown secondary color */
+  --ifm-color-secondary-dark: #c26d26;
+  --ifm-color-secondary-darker: #a85e20;
+  --ifm-color-secondary-darkest: #8f4f1a;
+  --ifm-color-secondary-light: #e08c47;
+  --ifm-color-secondary-lighter: #e49c5f;
+  --ifm-color-secondary-lightest: #e9ac7b;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 
@@ -25,20 +32,62 @@
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #60a5fa; /* Light blue */
-  --ifm-color-primary-dark: #3b82f6;
-  --ifm-color-primary-darker: #1d4ed8;
-  --ifm-color-primary-darkest: #1e40af;
-  --ifm-color-primary-light: #93c5fd;
-  --ifm-color-primary-lighter: #bfdbfe;
-  --ifm-color-primary-lightest: #dbeafe;
+  --ifm-color-primary: #dd9241; /* Light golden orange */
+  --ifm-color-primary-dark: #d28028;
+  --ifm-color-primary-darker: #b86e21;
+  --ifm-color-primary-darkest: #9e5d1c;
+  --ifm-color-primary-light: #e4a55f;
+  --ifm-color-primary-lighter: #ecc88d;
+  --ifm-color-primary-lightest: #f5e1c5;
+  --ifm-color-secondary: #DC7D2F; /* Orange-brown secondary color */
+  --ifm-color-secondary-dark: #e08c47;
+  --ifm-color-secondary-darker: #e49c5f;
+  --ifm-color-secondary-darkest: #e9ac7b;
+  --ifm-color-secondary-light: #c26d26;
+  --ifm-color-secondary-lighter: #a85e20;
+  --ifm-color-secondary-lightest: #8f4f1a;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 
-  /* Glassmorphism variables for dark mode */
-  --glass-bg: rgba(30, 41, 59, 0.3); /* slate-800 with transparency */
-  --glass-border: rgba(148, 163, 184, 0.2); /* slate-400 with transparency */
-  --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  --glass-backdrop: blur(12px);
+  /* Dark theme background - Black gradient */
+  --ifm-background-color: #000000;
+  --ifm-background-surface-color: #000000;
+  --ifm-color-content: #ffffff;
+  --ifm-color-content-inverse: #000000;
+  --ifm-navbar-background-color: #000000;
+  --ifm-footer-background-color: #000000;
+  --ifm-hero-background-color: #000000;
+  --ifm-card-background-color: #000000;
+}
+
+/* Light theme background */
+[data-theme='light'] {
+  --ifm-background-color: #ffffff;
+  --ifm-background-surface-color: #ffffff;
+}
+
+/* White background for hero section in light mode */
+[data-theme='light'] header.hero--primary {
+  background: #ffffff !important;
+  color: #000000 !important;
+}
+
+/* Ensure hero section text is black in light mode */
+[data-theme='light'] header.hero--primary h1,
+[data-theme='light'] header.hero--primary h2,
+[data-theme='light'] header.hero--primary h3,
+[data-theme='light'] header.hero--primary h4,
+[data-theme='light'] header.hero--primary h5,
+[data-theme='light'] header.hero--primary h6,
+[data-theme='light'] header.hero--primary p,
+[data-theme='light'] header.hero--primary span,
+[data-theme='light'] header.hero--primary div {
+  color: #000000 !important;
+}
+
+/* Keep button text white in light mode hero section */
+[data-theme='light'] header.hero--primary .button,
+[data-theme='light'] header.hero--primary .button--glass {
+  color: white !important;
 }
 
 /* Glassmorphism card styles */
@@ -64,23 +113,212 @@
   background-attachment: fixed;
 }
 
+/* Black gradient background for all sections */
+[data-theme='dark'] body {
+  background: linear-gradient(135deg, #000000 0%, #111111 100%);
+  color: white;
+}
+
+/* Black gradient for navbar */
+[data-theme='dark'] .navbar {
+  background: linear-gradient(135deg, #000000 0%, #111111 100%) !important;
+  color: white;
+}
+
+/* Black gradient for hero section */
+[data-theme='dark'] header.hero--primary {
+  background: linear-gradient(135deg, #000000 0%, #111111 100%) !important;
+  color: white;
+}
+
+/* Black gradient for features section */
+[data-theme='dark'] .features-section {
+  background: linear-gradient(135deg, #000000 0%, #111111 100%) !important;
+  color: white;
+}
+
+/* Black gradient for modules section */
+[data-theme='dark'] .module-card {
+  background: linear-gradient(135deg, #000000 0%, #111111 100%) !important;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Black gradient for footer */
+[data-theme='dark'] .footer {
+  background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%) !important;
+  color: #d28028;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 2rem;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+
+/* Light theme footer */
+[data-theme='light'] .footer {
+  background: #ffffff !important;
+  color: #d28028;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+
+/* Add thin line at the start of footer in light mode */
+[data-theme='light'] .footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.2), transparent);
+}
+
+/* Change navbar link hover color to #d28028 */
+.navbar__item:hover,
+.navbar__link:hover {
+  color: #d28028 !important;
+}
+
+/* Ensure GitHub link in navbar also changes to #d28028 on hover */
+.navbar__item[href*="github"]:hover,
+.navbar__link[href*="github"]:hover {
+  color: #d28028 !important;
+}
+
+/* Handle navbar link hover in dark theme */
+[data-theme='dark'] .navbar__item:hover,
+[data-theme='dark'] .navbar__link:hover {
+  color: #d28028 !important;
+}
+
+/* Handle navbar title hover */
+.navbar__title:hover {
+  color: #d28028 !important;
+}
+
+[data-theme='dark'] .navbar__title:hover {
+  color: #d28028 !important;
+}
+
+/* Sidebar link hover color */
+.menu__list-item a:hover,
+.menu__link:hover {
+  color: #d28028 !important;
+}
+
+/* Sidebar link hover for dark theme */
+[data-theme='dark'] .menu__list-item a:hover,
+[data-theme='dark'] .menu__link:hover {
+  color: #d28028 !important;
+}
+
+/* Footer text color */
+[data-theme='dark'] .footer .footer__title {
+  color: white !important;
+}
+
+/* Light mode footer text color */
+[data-theme='light'] .footer .footer__title {
+  color: #000000 !important;
+}
+
+/* Increase font size for "Textbook" and "Connect with me" titles */
+[data-theme='dark'] .footer .footer__col:first-child .footer__title,
+[data-theme='dark'] .footer .footer__col:nth-child(2) .footer__title {
+  font-size: 1.1rem !important;
+  font-weight: bold;
+}
+
+[data-theme='light'] .footer .footer__col:first-child .footer__title,
+[data-theme='light'] .footer .footer__col:nth-child(2) .footer__title {
+  font-size: 1.1rem !important;
+  font-weight: bold;
+}
+
+/* Footer link items should keep the orange color */
+[data-theme='dark'] .footer .footer__link-item {
+  color: #db8831 !important;
+}
+
+[data-theme='light'] .footer .footer__link-item {
+  color: #db8831 !important;
+}
+
+/* Footer copyright text */
+[data-theme='dark'] .footer__copyright,
+[data-theme='light'] .footer__copyright {
+  color: white !important;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* Light mode footer copyright - change to black */
+[data-theme='light'] .footer__copyright {
+  color: #000000 !important;
+}
+
+/* Style the "Crafted by Aisha" part in orange */
+.crafted-by {
+  color: #db8831 !important;
+}
+
+/* White text for dark theme */
+[data-theme='dark'] {
+  color: white;
+}
+
+[data-theme='dark'] h1,
+[data-theme='dark'] h2,
+[data-theme='dark'] h3,
+[data-theme='dark'] h4,
+[data-theme='dark'] h5,
+[data-theme='dark'] h6,
+[data-theme='dark'] p,
+[data-theme='dark'] span,
+[data-theme='dark'] div {
+  color: white !important;
+}
+
+/* Orange gradient buttons */
+[data-theme='dark'] .button,
+[data-theme='dark'] .button--secondary,
+[data-theme='dark'] .button--glass {
+  background: linear-gradient(135deg, #f8a252, #d28028) !important;
+  border: none !important;
+  color: white !important;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+[data-theme='dark'] .button:hover,
+[data-theme='dark'] .button--secondary:hover,
+[data-theme='dark'] .button--glass:hover {
+  background: linear-gradient(135deg, #d28028, #a86620) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(246, 160, 77, 0.3) !important;
+  text-decoration: none !important;
+}
+
 /* Gradient backgrounds */
 .gradient-bg {
-  background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+  background: linear-gradient(135deg, var(--ifm-color-primary) 0%, var(--ifm-color-primary-dark) 100%);
   background-attachment: fixed;
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+  background: linear-gradient(135deg, var(--ifm-color-primary) 0%, var(--ifm-color-secondary) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  font-weight: 700;
 }
 
 /* Hero banner with gradient and glassmorphism */
 .hero--primary {
-  background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%) !important;
+  background: linear-gradient(135deg, var(--ifm-color-primary) 0%, var(--ifm-color-primary-dark) 100%) !important;
   color: white;
 }
 
@@ -104,11 +342,37 @@
   text-decoration: none;
 }
 
+/* Secondary button style using #DC7D2F */
+.button--secondary {
+  background-color: var(--ifm-color-secondary);
+  border-color: var(--ifm-color-secondary);
+  color: white;
+}
+
+.button--secondary:hover {
+  background-color: var(--ifm-color-secondary-dark);
+  border-color: var(--ifm-color-secondary-dark);
+  color: white;
+}
+
 /* Module cards */
 .module-card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: var(--glass-backdrop);
+  -webkit-backdrop-filter: var(--glass-backdrop);
+  box-shadow: var(--glass-shadow);
+  border-radius: 16px;
+  padding: 24px;
   height: 100%;
   display: flex;
   flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.module-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.45);
 }
 
 .module-card h3 {
@@ -116,15 +380,24 @@
   margin-bottom: 12px;
 }
 
-.module-card p {
-  flex-grow: 1;
-  color: var(--ifm-font-color-base);
+/* Dark theme module cards */
+[data-theme='dark'] .module-card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: var(--glass-backdrop);
+  -webkit-backdrop-filter: var(--glass-backdrop);
+  box-shadow: var(--glass-shadow);
 }
 
 /* Feature section styling */
 .features-section {
   padding: 64px 0;
   background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+}
+
+/* White background for features section in light mode */
+[data-theme='light'] .features-section {
+  background: #ffffff !important;
 }
 
 [data-theme='dark'] .features-section {
@@ -141,8 +414,77 @@
 
 /* Custom typography */
 .text-gradient {
-  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  background: linear-gradient(135deg, var(--ifm-color-primary), var(--ifm-color-secondary));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+/* Make text gradient heading black in light mode */
+[data-theme='light'] .text-gradient {
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  -webkit-text-fill-color: #000000 !important;
+  background-clip: initial !important;
+  color: #000000 !important;
+}
+
+/* Module card headings to black in light mode */
+[data-theme='light'] .module-card h3 {
+  color: #000000 !important;
+}
+
+/* Add gap between glass cards when they stack vertically */
+.text--center.padding-horiz--md .row {
+  row-gap: 24px;
+}
+
+/* Stack hero section layout on smaller screens: text first, then image */
+@media (max-width: 768px) {
+  header[class*="hero"] .glass-card {
+    flex-direction: column !important;
+  }
+
+  header[class*="hero"] .glass-card > div:first-child {
+    order: 1;
+    text-align: center !important;
+  }
+
+  header[class*="hero"] .glass-card > div:last-child {
+    order: 2;
+    margin-top: 2rem;
+  }
+}
+
+/* Specific rule for sidebar text items hover in dark mode - textbook route */
+[data-theme='dark'] .menu__link:hover {
+  color: #db8831 !important;
+}
+
+/* Target sidebar category items in dark mode with highest specificity */
+[data-theme='dark'] .theme-doc-sidebar-menu .menu__link:hover {
+  color: #db8831 !important;
+}
+
+/* More specific rules for category titles */
+[data-theme='dark'] .theme-doc-sidebar-item-category > .menu__list-item-collapsible > .menu__link:hover,
+[data-theme='dark'] .sidebar-item-category > .menu__link:hover {
+  color: #db8831 !important;
+}
+
+/* Target all sidebar items in dark mode */
+[data-theme='dark'] .theme-sidebar-menu .menu__list-item > .menu__link:hover,
+[data-theme='dark'] .theme-sidebar-menu .menu__list-item-collapsible:hover .menu__link {
+  color: #db8831 !important;
+}
+
+/* Override for active links on hover */
+[data-theme='dark'] .menu__link--active:hover {
+  color: #db8831 !important;
+}
+
+/* Highest specificity for sidebar category links */
+:global(.theme-doc-sidebar-menu) [data-theme='dark'] .menu__link:hover,
+:root[data-theme='dark'] .sidebar .menu .menu__link:hover {
+  color: #db8831 !important;
 }
